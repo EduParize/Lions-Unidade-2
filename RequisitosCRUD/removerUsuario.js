@@ -21,7 +21,7 @@ export function removerUsuario() {
   const removerID = usuarios.findIndex(
     (usuario) => usuario.id === removerOpcao
   );
-  const usuarioRemovido = usuarios[removerID].nome;
+
   if (removerID === -1) {
     console.clear();
     console.log(
@@ -29,6 +29,7 @@ export function removerUsuario() {
     );
     removerUsuario();
   } else {
+    const usuarioRemovido = usuarios[removerID].nome;
     console.log(
       `Tem certeza que deseja remover o Usuario ${usuarioRemovido}\n1-Sim\n2-Outro`
     );

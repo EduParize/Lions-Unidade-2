@@ -19,6 +19,12 @@ export function adicionarTelefone(nomeUsuario, telefonesDoUsuario) {
   );
   let telefoneUsuario = prompt("> ");
 
+  if (isNaN(telefoneUsuario) || telefoneUsuario.length != 11) {
+    console.clear()
+    console.log("Informacoes invalidas, insira novamente!");
+    adicionarTelefone(nomeUsuario, telefonesDoUsuario)
+  } else{
+    console.clear()
   const telefoneFormatado = `(${telefoneUsuario.substring(
     0,
     2
@@ -47,10 +53,6 @@ export function adicionarTelefone(nomeUsuario, telefonesDoUsuario) {
   })
   
   console.clear();
-  if (isNaN(telefoneUsuario) || telefoneUsuario.length != 11) {
-    console.log("Informacoes invalidas, insira novamente!");
-    adicionarUsuario();
-  } else {
     criarUsuario(nomeUsuario, emailUsuario, telefonesDoUsuario);
 
     exibirMenu();

@@ -19,15 +19,16 @@ export function atualizarUsuario() {
     exibirMenu();
   }
   const editarID = usuarios.findIndex((usuario) => usuario.id === editarOpcao);
-  const usuarioEditando = usuarios[editarID];
+  
   if (editarID === -1) {
     console.clear();
     console.log(
       "ID inválido! Nenhum usuário encontrado com este ID. Insira novamente!"
     );
     atualizarUsuario();
+    return
   }
-
+  const usuarioEditando = usuarios[editarID];
   console.clear();
   console.log(
     `Insira qual area do '${usuarioEditando.nome}' gostaria de atualizar:\n1-Nome\n2-Email\n3-Telefones\n0-Voltar ao menu`
