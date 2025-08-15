@@ -108,7 +108,7 @@ function editarTelefone(usuarioEditando) {
     case 0:
       console.clear();
       console.log("Voltando!");
-      editarUsuario();
+      atualizarUsuario();
   }
 }
 
@@ -171,4 +171,29 @@ function alterarNumero(usuarioEditando) {
   exibirMenu()
   
 }
+}
+
+function removerNumero(usuarioEditando){
+  console.log(`Numeros de telefones do Usuario ${usuarioEditando.nome}`)
+  usuarioEditando.telefone.forEach((telefone)=>{
+    console.log(`-${telefone}`)
+  })
+  console.log("Insira qual o numero que deseja remover:")
+  let telefoneRemover = prompt("> ")
+  const telefoneIDRemover = usuarioEditando.telefone.findIndex(
+    (telefone) => telefone === telefoneRemover
+  );
+  const telefoneRemovendo = usuarioEditando.telefone[telefoneIDRemover];
+  if (telefoneIDRemover === -1) {
+    console.clear();
+    console.log(
+      `Telefone inválido! O usuario ${usuarioEditando.nome} não possuiu nenhum telefone ${telefoneRemover} Insira novamente!`
+    );
+    removerNumero(usuarioEditando);
+  }
+  console.clear()
+  console.log(`O numero ${telefoneRemover} foi removido do Usuario ${usuarioEditando.nome}`)
+  usuarioEditando.telefone.splice(telefoneIDRemover, 1)
+
+  exibirMenu()
 }
