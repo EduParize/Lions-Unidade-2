@@ -1,0 +1,33 @@
+#Requisitos
+----------------------------------------------------------------------------
+Cadastro de usuário:
+
+    -Deve ser gerado um id sequencial para cada usuário
+
+    -Deve ser adicionado o e-mail, nome e uma lista de
+    telefones do usuário
+
+    -Não permitir o cadastro de usuário com e-mail duplicado
+
+    -Exibir mensagem de erro em caso de e-mail duplicado
+----------------------------------------------------------------------------
+Busca de usuários:
+
+    -O sistema deve listar todos os usuários com suas informações
+
+    -Telefones devem ser exibidos como uma lista associada
+----------------------------------------------------------------------------
+Atualização de usuário:
+
+    -O usuário pode atualizar o nome, o e-mail ou adicionar ou
+    remover um telefone associado
+
+    -Ao atualizar o e-mail, deve garantir o novo não está em uso
+
+    -Exibir mensagem de erro se o novo e-mail já estiver em uso
+----------------------------------------------------------------------------
+Remoção de contato
+
+    -Permitir a remoção de um contato especificando um ID
+
+    -Solicitar mensagem de confirmação antes de proceder
