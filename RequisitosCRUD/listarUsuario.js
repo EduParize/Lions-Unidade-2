@@ -3,7 +3,7 @@ import { usuarios, prompt, exibirMenu} from "./menu.js";
 export function listarUsuario() {
   if (usuarios.length <= 0) {
     console.log("Nenhum contato registrado!");
-    exibirMenu();
+    exibirMenu()
   }
 
   usuarios.forEach((usuario) => {
@@ -12,5 +12,5 @@ export function listarUsuario() {
     );
     console.log("--------------------------");
   });
-  exibirMenu();
+  exibirMenu()
 }

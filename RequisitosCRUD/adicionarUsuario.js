@@ -44,13 +44,14 @@ export function adicionarTelefone(nomeUsuario, telefonesDoUsuario) {
   );
   let emailUsuario = prompt("> ");
 
-  usuarios.forEach(usuario=>{
-    if (usuario.email.includes(emailUsuario)) {
-        console.clear();
-        console.log("Email ja cadastrado em outro usuario!");
-        adicionarUsuario();
-      }
-  })
+  const emailJaExiste = usuarios.some(usuario => usuario.email === emailUsuario);
+
+    if (emailJaExiste) {
+      console.clear();
+      console.log("Email ja cadastrado em outro usuario! Tente novamente.");
+      adicionarUsuario(); 
+      return; 
+    }
   
   console.clear();
     criarUsuario(nomeUsuario, emailUsuario, telefonesDoUsuario);

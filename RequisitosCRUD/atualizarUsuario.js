@@ -72,13 +72,17 @@ function editarEmail(usuarioEditando) {
   );
   let novoEmail = prompt("> ");
 
-  usuarios.forEach((usuario) => {
-    if (usuario.email.includes(novoEmail)) {
-      console.clear();
-      console.log("Email ja cadastrado em outro usuario!");
-      editarEmail(usuarioEditando);
-    }
-  });
+  
+  const emailJaExiste = usuarios.some(
+    (usuario) => usuario.email === novoEmail && usuario.id !== usuarioEditando.id
+  );
+
+  if (emailJaExiste) {
+    console.clear();
+    console.log("Email ja cadastrado em outro usuario!");
+    editarEmail(usuarioEditando); 
+    return; 
+  }
   console.log(
     `Alterando email do usuario ${usuarioEditando.nome} para ${novoEmail}`
   );
