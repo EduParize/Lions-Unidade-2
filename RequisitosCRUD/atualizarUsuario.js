@@ -94,12 +94,15 @@ function editarTelefone(usuarioEditando) {
   opcaoTelefone = parseInt(opcaoTelefone);
   switch (opcaoTelefone) {
     case 1:
+      console.clear()
       adicionarNumero(usuarioEditando);
       break;
     case 2:
+      console.clear()
       alterarNumero(usuarioEditando);
       break;
     case 3:
+      console.clear()
       removerNumero(usuarioEditando);
       break;
     case 0:
@@ -133,19 +136,20 @@ function adicionarNumero(usuarioEditando) {
 }
 
 function alterarNumero(usuarioEditando) {
-  usuarioEditando.telefone.forEach(() => {
-    console.log(`${usuarioEditando.telefone}`);
+  console.log(`Telefones do Usuario ${usuarioEditando.nome}`)
+  usuarioEditando.telefone.forEach((telefone) => {
+    console.log(`-${telefone}`);
   });
   console.log("Insira qual numero vc gostaria de alterar: ");
   let telefoneAlterar = prompt("> ");
   const telefoneID = usuarioEditando.telefone.findIndex(
-    (telefone) => usuarioEditando.telefone === telefoneAlterar
+    (telefone) => telefone === telefoneAlterar
   );
   const telefoneAlterando = usuarioEditando.telefone[telefoneID];
-  if (telefoneAlterando === -1) {
+  if (telefoneID === -1) {
     console.clear();
     console.log(
-      `Telefone inválido! O usuario ${usuarioEditando }não possuiu nenhum telefone ${telefoneAlterar} Insira novamente!`
+      `Telefone inválido! O usuario ${usuarioEditando.nome} não possuiu nenhum telefone ${telefoneAlterar} Insira novamente!`
     );
     alterarNumero(usuarioEditando);
   }
@@ -153,11 +157,18 @@ function alterarNumero(usuarioEditando) {
     `Insira qual o novo numero que deseja adicionar no lugar de ${telefoneAlterando}:`
   );
   let novoTelefone = prompt("> ");
+  if (isNaN(novoTelefone) || novoTelefone.length != 11) {
+    console.log("Numero invalido, insira novamente!");
+    alterarNumero(usuarioEditando);
+  } else{
   const novoTelefoneFormatado = `(${novoTelefone.substring(
     0,
     2
   )})${novoTelefone.substring(2, 7)}-${novoTelefone.substring(7)}`;
+  console.clear()
   console.log(`Alterado telefone do usuario "${usuarioEditando.nome}" ${telefoneAlterando} para ${novoTelefoneFormatado}`)
-  telefoneAlterando = novoTelefoneFormatado;
+  usuarioEditando.telefone[telefoneID] = novoTelefoneFormatado;
+  exibirMenu()
   
+}
 }
