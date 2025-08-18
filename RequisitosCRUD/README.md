@@ -16,6 +16,7 @@ Cadastro de usuário:
     - Exibir mensagem de erro em caso de e-mail duplicado.
 ----------------------------------------------------------------------------
 Listagem de usuários:
+
     - Exibir mensagem de erro caso não exista nenhum usuario cadastrado ainda.
 
     - O sistema deve listar todos os usuários com suas informações.
@@ -23,6 +24,7 @@ Listagem de usuários:
     - Telefones devem ser exibidos como uma lista associada.
 ----------------------------------------------------------------------------
 Atualização de usuário:
+
     - Exibir mensagem de erro caso não exista nenhum usuario cadastrado ainda.
 
     - O usuário pode atualizar o nome, o e-mail ou adicionar ou
@@ -44,7 +46,7 @@ Atualização de usuário:
 
     - Mostrar qual informacao do usuario acabou de ser atualizada.
 ----------------------------------------------------------------------------
-Remoção de contato
+Remoção de contato:
 
     - Exibir mensagem de erro caso não exista nenhum usuario cadastrado ainda.
 
