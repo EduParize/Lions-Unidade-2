@@ -1,22 +1,26 @@
 let idBaralho = 0;
 let idFlashcard = 0;
-
+let pergunta;
+let resposta;
 export let baralhos = [];
 
-let flashcards = [];
-// let flashcard = {
-//   id: idFlashcard,
-//   pergunta: pergunta,
-//   responta: resposta,
-//   idBaralho: idBaralho,
-// };
+export let flashcards = [];
 
-export function gerarBaralho(nomeBaralho){
-    let baralho = {
-        id: idBaralho,
-        titulo: nomeBaralho,
-        flashcards: flashcards,
-      };
-      baralhos.push(baralho)
-      
+export function gerarBaralho(nomeBaralho) {
+  let baralho = {
+    id: idBaralho,
+    titulo: nomeBaralho,
+  };
+  idBaralho++;
+  baralhos.push(baralho);
+}
+export function gerarFlashcard(pergunta, resposta, idBaralho) {
+  let flashcard = {
+    id: idFlashcard,
+    pergunta: pergunta,
+    responta: resposta,
+    idBaralho: idBaralho,
+  };
+  idFlashcard++;
+  flashcards.push(flashcard)
 }

@@ -1,9 +1,15 @@
 import PromptSync from "prompt-sync";
 export const prompt = PromptSync({ sigint: true });
-import { gerarBaralho } from "./data.js"
+import { gerarBaralho } from "./data.js";
 import { criarBaralho } from "./Baralho/criarBaralho.js";
 import { listarBaralhos } from "./Baralho/listarBaralho.js";
-
+import { atualizarBaralho } from "./Baralho/atualizarBaralho.js";
+import { deletarBaralho } from "./Baralho/deletarBaralho.js";
+import { criarFlashcard } from "./flashcard/criarFlashcard.js";
+import { listarFlashcards } from "./flashcard/listarFlashcards.js";
+import { listarFlashcardsPorBaralhoId } from "./flashcard/listarFlashcardsPorBaralhoId.js";
+import { atualizarFlashcard } from "./flashcard/atualizarFlashcard.js";
+import { deletarFlashcard } from "./flashcard/deletarFlashcard.js";
 export function exibirMenu() {
   console.log(
     "=========MENU=========\n1-Baralho\n2-Flashcard\n0-Sair do programa"
@@ -63,7 +69,7 @@ function menuBaralho() {
 
 function menuFlashcard() {
   console.log(
-    "=========MENU=========\n1-Criar Flashcard\n2-Listar Flashcards\n3-Listar Flashcards por ID\n4-Buscar Flashcard por Baralho\n5-Buscar Flashcard por Pergunta\n6-Buscar Flashcards Por ID\n7-Atualizar Flashcard\n8-Deletar Flashcard\n0-Voltar"
+    "=========MENU=========\n1-Criar Flashcard\n2-Listar Flashcards\n3-Listar Flashcards por Baralho\n4-Atualizar Flashcard\n5-Deletar Flashcard\n6-Buscar Flashcard por Pergunta\n7-Buscar Flashcards Por ID\n0-Voltar"
   );
 
   console.log("Insira a o opcao que deseja:");
@@ -72,18 +78,22 @@ function menuFlashcard() {
   switch (opcaoFlashcard) {
     case 1:
       console.clear();
-      criarBaralho();
+      criarFlashcard();
       break;
     case 2:
       console.clear();
-      listarBaralhos();
+      listarFlashcards();
       break;
     case 3:
       console.clear();
-      atualizarBaralho();
+      listarFlashcardsPorBaralhoId();
     case 4:
+      console.clear;
+      atualizarFlashcard();
+      break;
+    case 5:
       console.clear();
-      deletarBaralho();
+      deletarFlashcard();
     case 0:
       console.clear();
       exibirMenu();
