@@ -1,6 +1,6 @@
 import PromptSync from "prompt-sync";
 export const prompt = PromptSync({ sigint: true });
-import { baralhos } from "../data.js";
+import { baralhos, flashcards } from "../data.js";
 import { exibirMenu } from "../menu.js";
 
 export function deletarBaralho() {
@@ -28,8 +28,14 @@ export function deletarBaralho() {
   );
   let confirmarDelete = prompt("> ");
   if (confirmarDelete == 1) {
-    console.clear()
-    console.log(`"${baralhoDeletando.titulo}" deletado!`);
+    console.clear();
+    for(let i=(flashcards.length)-1;i>=0;i--){
+
+      if(flashcards[i].idBaralho == deletarOpcao){
+        flashcards.splice(i ,1)
+      }}
+    
+    console.log(`"${baralhoDeletando.titulo}" e seus flashcards deletados!`);
     baralhos.splice(deletarID, 1);
     exibirMenu();
   } else {

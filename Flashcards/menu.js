@@ -10,6 +10,8 @@ import { listarFlashcards } from "./flashcard/listarFlashcards.js";
 import { listarFlashcardsPorBaralhoId } from "./flashcard/listarFlashcardsPorBaralhoId.js";
 import { atualizarFlashcard } from "./flashcard/atualizarFlashcard.js";
 import { deletarFlashcard } from "./flashcard/deletarFlashcard.js";
+import { buscarFlashcardsPorBaralho } from "./flashcard/buscarFlashcardsPorBaralho.js";
+import { buscarFlashcardsPorPergunta } from "./flashcard/buscarFlashcardsPorPergunta.js";
 export function exibirMenu() {
   console.log(
     "=========MENU=========\n1-Baralho\n2-Flashcard\n0-Sair do programa"
@@ -55,9 +57,11 @@ function menuBaralho() {
     case 3:
       console.clear();
       atualizarBaralho();
+      break;
     case 4:
       console.clear();
       deletarBaralho();
+      break;
     case 0:
       console.clear();
       exibirMenu();
@@ -94,6 +98,15 @@ function menuFlashcard() {
     case 5:
       console.clear();
       deletarFlashcard();
+      break;
+    case 6:
+      console.clear();
+      buscarFlashcardsPorBaralho();
+      break;
+    case 7:
+      console.clear;
+      buscarFlashcardsPorPergunta();
+      break;
     case 0:
       console.clear();
       exibirMenu();

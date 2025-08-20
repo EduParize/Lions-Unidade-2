@@ -2,11 +2,13 @@ import { baralhos } from "../data.js";
 import { exibirMenu } from "../menu.js";
 
 export function listarBaralhos() {
+  if (baralhos.length == 0) {
+    console.log("Nenhum baralho cadastrado!");
+    exibirMenu();
+  }
   baralhos.forEach((baralho) => {
-    console.log(
-      `ID: ${baralho.id}\nNome: ${baralho.titulo}`
-    );
-    console.log("----------------------------------")
+    console.log(`ID: ${baralho.id}\nNome: ${baralho.titulo}`);
+    console.log("----------------------------------");
   });
   exibirMenu();
 }

@@ -18,7 +18,7 @@ export function gerarFlashcard(pergunta, resposta, idBaralho) {
   let flashcard = {
     id: idFlashcard,
     pergunta: pergunta,
-    responta: resposta,
+    resposta: resposta,
     idBaralho: idBaralho,
   };
   idFlashcard++;
