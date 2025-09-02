@@ -1,24 +1,9 @@
-const express = require("express");
-const app = express();
-const port = 3000;
+export const express = require("express");
+export const app = express();
+export const port = 3000;
+export let proximoID = 0;
+export let livros = [];
 app.use(express.json());
-let proximoID = 0;
-let livros = [
-  //   {
-  //     id: 0,
-  //     title: "Neymaru",
-  //     author: "Plameiras da silva",
-  //     year: 1914,
-  //     genre: "FIlmes",
-  //   },
-  //   {
-  //     id: 1,
-  //     title: "la ele",
-  //     author: "davi da silva",
-  //     year: 2025,
-  //     genre: "ajuda pessoal",
-  //   },
-];
 
 app.post("/livros", (req, res) => {
   const novoLivro = {
