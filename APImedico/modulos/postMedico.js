@@ -1,4 +1,4 @@
-import { medicos } from "./data.js";
+import { medicos } from "../data.js";
  let proximoIDmedico = 0;
 export function postMedico(req, res) {
   const {nomeMedico, especialidade } = req.body;
@@ -15,5 +15,5 @@ export function postMedico(req, res) {
   medicos.push(novoMedico);
   return res
     .status(201)
-    .send(`Medico ${req.body.nomeMedico} adicionado ao banco!`);
+    .send(`Medico "${req.body.nomeMedico}" adicionado ao banco!`);
 }

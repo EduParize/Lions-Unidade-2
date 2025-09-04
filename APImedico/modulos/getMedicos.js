@@ -1,4 +1,4 @@
-import { medicos } from "./data.js";
+import { medicos } from "../data.js";
 
 export function getMedicos(req, res) {
   if (medicos.length > 0) {
