@@ -2,15 +2,6 @@ import { consultas, medicos, pacientes } from "../data.js";
 let proximoIDconsulta = 0
 export function postConsultas(req, res){
     const {dataConsulta, descricao, idMedico, idPaciente} = req.body
-    // const medicoIndex=  medicos.findIndex((l) => l.id === idMedico);
-    // const pacienteIndex = pacientes.findIndex((l)=>l.id===idPaciente);
-    // if (!medicoIndex) {
-    //     return res.status(404).send("Médico não encontrado.");
-    // }
-
-    // if (!pacienteIndex) {
-    //     return res.status(404).send("Paciente não encontrado.");
-    // }
     const novaConsulta={
         id: proximoIDconsulta++,
         dataConsulta: req.body.dataConsulta,
