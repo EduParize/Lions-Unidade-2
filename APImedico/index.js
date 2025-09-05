@@ -21,6 +21,7 @@ import { deletePaciente } from "./modulos/deletePaciente.js";
 import { getBuscarConsultas } from "./modulos/getBuscarConsulta.js";
 import { getBuscarMedico } from "./modulos/getBuscarMedico.js";
 import { getBuscarPaciente } from "./modulos/getBuscarPaciente.js";
+import { getRelatorioMedicos } from "./modulos/getRelatorioMedicos.js";
 
 router.post("/medicos", postMedico);
 router.get("/medicos", getMedicos);
@@ -37,6 +38,7 @@ router.delete("/pacientes/:id", deletePaciente);
 router.get("/medicos/buscar", getBuscarMedico);
 router.get("/pacientes/buscar", getBuscarPaciente);
 router.get("/consultas/buscar", getBuscarConsultas);
+router.get("/relatorios/consultas/medicos/:idMedico", getRelatorioMedicos)
 
 router.get("/", (req, res) => {
   res.send("API funcionando!");
