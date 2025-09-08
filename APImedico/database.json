@@ -1,0 +1,41 @@
+{
+  "medicos": [
+    {
+      "id": 0,
+      "nomeMedico": "paraizo",
+      "especialidade": "penis"
+    },
+    {
+      "id": 1,
+      "nomeMedico": "saze",
+      "especialidade": "penis"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": 0,
+      "nomePaciente": "endrick",
+      "dataNascimentoPaciente": "29-09-2005"
+    }
+  ],
+  "consultas": [
+    {
+      "id": 0,
+      "dataConsulta": "10-12-2025",
+      "idMedico": "1",
+      "nomeMedico": "saze",
+      "idPaciente": "0",
+      "nomePaciente": "endrick",
+      "descricao": "fazer amor"
+    },
+    {
+      "id": 1,
+      "dataConsulta": "10-12-2025",
+      "idMedico": "0",
+      "nomeMedico": "paraizo",
+      "idPaciente": "0",
+      "nomePaciente": "endrick",
+      "descricao": "fazer amor"
+    }
+  ]
+}
