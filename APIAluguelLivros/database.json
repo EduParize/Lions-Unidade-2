@@ -1,0 +1,61 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nomeAluno": "neymar",
+      "matriculaAluno": "1234",
+      "cursoAluno": "vagabundo",
+      "anoAluno": "2025"
+    },
+    {
+      "id": 2,
+      "nomeAluno": "paraizo",
+      "matriculaAluno": "1234",
+      "cursoAluno": "vagabundo",
+      "anoAluno": "2025"
+    }
+  ],
+  "livros": [
+    {
+      "id": 1,
+      "tituloLivro": "paraizo",
+      "autorLivro": "penis",
+      "anoLivro": 2025,
+      "generoLivro": "dark romance"
+    },
+    {
+      "id": 2,
+      "tituloLivro": "abel",
+      "autorLivro": "penis",
+      "anoLivro": 2025,
+      "generoLivro": "dark romance"
+    },
+    {
+      "id": 3,
+      "tituloLivro": "bebel",
+      "autorLivro": "penis",
+      "anoLivro": 2025,
+      "generoLivro": "dark romance"
+    }
+  ],
+  "alugueis": [
+    {
+      "id": 0,
+      "idLivro": "2",
+      "nomeLivro": "bebel",
+      "idAluno": "1",
+      "nomeAluno": "paraizo",
+      "dataAluguel": "2025-09-10T14:56:24.491Z",
+      "dataDevolucao": "29/09/2332"
+    },
+    {
+      "id": 1,
+      "idLivro": "1",
+      "nomeLivro": "abel",
+      "idAluno": "0",
+      "nomeAluno": "neymar",
+      "dataAluguel": "2025-09-10T14:55:56.604Z",
+      "dataDevolucao": "29/09/2332"
+    }
+  ]
+}
