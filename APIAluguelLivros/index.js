@@ -18,6 +18,9 @@ import { putLivros } from "./modulos/putLivros.js";
 import { deleteLivros } from "./modulos/deleteLivros.js";
 import { putAluguel } from "./modulos/putAluguel.js";
 import { deleteAlguel } from "./modulos/deleteAluguel.js";
+import { getBuscarLivros } from "./modulos/getBuscaLivro.js";
+import { getBuscarAluno } from "./modulos/getBuscaAluno.js";
+import { getBuscarAluguel } from "./modulos/getBuscaAluguel.js";
 
 router.post("/livros", postLivros);
 router.get("/livros", getLivros);
@@ -31,6 +34,9 @@ router.put("/livros/:id", putLivros);
 router.delete("/livros/:id", deleteLivros);
 router.put("/aluguel/:id", putAluguel)
 router.delete("/aluguel/:id", deleteAlguel)
+router.get("/livros/buscar", getBuscarLivros)
+router.get("/alunos/buscar", getBuscarAluno)
+router.get("/aluguel/buscar", getBuscarAluguel)
 
 router.get("/", (req, res) => {
   res.send("API funcionando!");
