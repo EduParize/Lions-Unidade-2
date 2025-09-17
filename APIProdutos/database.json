@@ -1,0 +1,11 @@
+{
+  "produtos": [
+    {
+      "id": 0,
+      "nome": "la ele",
+      "categoria": "alimento",
+      "preco": 2025,
+      "estoque": 50
+    }
+  ]
+}
