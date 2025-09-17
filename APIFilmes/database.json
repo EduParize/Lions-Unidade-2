@@ -1,0 +1,11 @@
+{
+  "filmes": [
+    {
+      "id": 0,
+      "titulo": "O filme",
+      "diretor": "paraizo",
+      "ano": 2025,
+      "genero": "terror"
+    }
+  ]
+}
